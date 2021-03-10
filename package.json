@@ -1,0 +1,50 @@
+{
+  "name": "iracing.js",
+  "version": "1.0.0",
+  "description": "iRacing API wrapper for Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint {src,test}/**/*.ts --format stylish",
+    "test": "nyc mocha",
+    "test:watch": "mocha -w --reporter min"
+  },
+  "keywords": [
+    "iracing",
+    "api"
+  ],
+  "author": "Tiago Veiga Lázaro",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.33",
+    "@types/sinon": "^9.0.11",
+    "@types/sinon-chai": "^3.2.5",
+    "chai": "^4.3.3",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.3.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4",
+    "sinon-chai": "^3.5.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.2.3"
+  },
+  "nyc": {
+    "require": [
+      "ts-node/register"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}
